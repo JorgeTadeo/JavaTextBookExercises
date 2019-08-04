@@ -1,0 +1,10 @@
+class Main {
+  public static void main(String[] args) {
+    System.out.println("Hello world!");
+    String name = "Jorge";
+    int age = 25;
+    double annualPay = 70000;
+     System.out.println("Name: " + name + " Age: "+ age +
+     " Annual Pay: "+ annualPay);
+  }
+}
