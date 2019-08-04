@@ -1,0 +1,19 @@
+import java.util.Scanner;
+class Main {
+  public static void main(String[] args) {
+    System.out.println("Welcome to Test Average!");
+    int test1, test2, test3;
+    Scanner userInput = new Scanner(System.in);
+    
+    System.out.println("Enter your first test score.");
+    test1 = userInput.nextInt();
+    
+    System.out.println("Enter your second test score.");
+    test2 = userInput.nextInt();
+    
+    System.out.println("Enter you third test score.");
+    test3 = userInput.nextInt();
+  
+  System.out.println("Your Average is: " +((test1+test2+test3)/3));
+  }
+}
