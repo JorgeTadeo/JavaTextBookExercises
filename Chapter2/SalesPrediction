@@ -1,0 +1,9 @@
+class Main {
+  public static void main(String[] args) {
+    float percent = 0.62F;
+    int sales = 4600000;
+
+    System.out.println(percent * sales);
+
+  }
+}
