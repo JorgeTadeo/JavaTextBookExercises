@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+class Main {
+  public static void main(String[] args) {
+    System.out.println("Welcome to Cookie Calories!");
+    int bag = 40;
+    int servings = 10;
+    float oneServing = (bag/servings);
+    int caloriesPerServing = 300;
+    Scanner userInput = new Scanner(System.in);
+    
+     System.out.println("Enter the number of cookies ate or -1 to quit");
+     int amount = userInput.nextInt();
+     
+     while(amount != -1){
+     System.out.println("Total Calories: " + ((amount / oneServing) * caloriesPerServing));
+     System.out.println("Enter the number of cookies ate or -1 to quit");
+     amount = userInput.nextInt();
+     }
+  }
+}
