@@ -1,0 +1,10 @@
+class Main {
+  public static void main(String[] args) {
+
+    String firstName = "Jorge", middleName= "Brain", lastName = "Tadeo";
+    char firstInitial = 'J', middleInitial = 'B', lastInitial = 'T';
+
+    System.out.println(firstName + middleName + lastName);
+
+  }
+}
