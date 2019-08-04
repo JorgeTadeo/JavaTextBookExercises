@@ -1,0 +1,66 @@
+import java.util.Scanner;
+
+class Main {
+  public static void main(String[] args) {
+    Scanner userInput = new Scanner(System.in);
+    System.out.println("Please enter the letter of your Package");
+    String packageLetter = userInput.nextLine();
+    System.out.println("Enter your hours");
+    double userHours = userInput.nextDouble();
+    
+    switch(packageLetter){
+      case "A":
+      if(userHours >= 10){
+        double userHoursB = userHours;
+        userHours -= 10;
+        double cost = (2.00 * userHours) + 9.95;
+        double costC = cost;
+        System.out.println("Total cost on plan A: $" + cost);
+          if(cost > 13.95 && userHoursB <= 20){
+          double savingsB =  cost - 13.95;
+          System.out.print("Total cost on plan B: $" + 13.95 +"\nTotal Savings on plan B: $"+ savingsB);
+            if(costC > 19.95){
+              System.out.println("\nTotal total cost on C: $" + 19.95 + "\nTotal savings on C: $" + (costC - 19.95));
+            }
+          }
+          else if( userHoursB >= 20){
+            userHoursB -= 20;
+            double costB = ((1.00 * userHoursB) + 13.95);
+            double savingsB = cost - costB;
+            System.out.println("Total cost on plan B: $" + costB + "\nTotal Savings on B: $" + savingsB);
+              if(costC > 19.95){
+              System.out.println("Total total cost on C: $" + 19.95 + "\nTotal savings on C: $" + (costC - 19.95));
+            }
+          }
+      }
+      else{
+        System.out.println("Total cost: $9.95");
+      }
+      break;
+
+      case "B":
+      if(userHours >= 20){
+        double userHoursA = userHours;
+        userHours -= 20;
+        double cost = ((1.00 * userHours) + 13.95);
+        double costC = cost;
+        System.out.println("Total cost: $" + cost);
+        if(userHoursA <= 10){
+           System.out.println("Total total cost on A: $" + 9.95 + "\nTotal savings on A: $" + (cost - 9.95));
+           }
+        else if(cost > 19.95){
+           System.out.println("Total total cost on C: $" + 19.95 + "\nTotal savings on C: $" + (costC - 19.95));
+        }
+      }
+      else{
+        System.out.println("Total cost: $13.95");
+      }
+      break;
+
+      case "C":
+      System.out.println("Total cost: $19.95");
+      break;
+    }
+    
+  }
+}
