@@ -1,0 +1,19 @@
+import java.util.Scanner;
+class Main {
+  public static void main(String[] args) {
+    Scanner userInput = new Scanner(System.in);
+    float stateTax = .04F, countryTax = .02F, totalTax;
+
+    System.out.println("Please enter in amount of purchase");
+    int amount = userInput.nextInt();
+    
+  while(amount != -1){
+    System.out.println("State Tax: " + (stateTax * amount));
+    System.out.println("Country Tax: " + (countryTax * amount));
+    System.out.println("Total Tax: " + ((stateTax * amount) + (countryTax * amount)));
+    System.out.println("Total Sale: " + (((stateTax * amount) + (countryTax * amount)) + amount));
+    System.out.println("Enter another amount or -1 to exit.");
+    amount = userInput.nextInt();
+    }
+  }
+}
