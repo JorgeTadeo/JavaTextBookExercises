@@ -1,0 +1,7 @@
+class Main {
+  public static void main(String[] args) {
+    int oneacre = 43560;
+    int myacre = 389767;
+    System.out.println("Total Acres: " + (myacre/oneacre));
+  }
+}
